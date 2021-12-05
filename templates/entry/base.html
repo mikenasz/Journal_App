@@ -13,11 +13,16 @@
         {% endblock %}
 
       <link rel="stylesheet" href="{% static 'journal.css' %}">
+
   </head>
   <body>
-    {% block body %}
-    {% endblock %}
-
+    <div class="container-my-5">
+        <div class="row text-center" id="header">
+            <h1>Journal App</h1>
+        </div>
+            {% block body %}
+             {% endblock %}
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

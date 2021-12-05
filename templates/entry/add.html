@@ -3,3 +3,20 @@
 {% block title %}
     <title>Title</title>
 {% endblock %}
+{% block body %}
+<div class="container my-5">
+    <h1> Journal Entry</h1>
+    <form method="post" action="{% url 'add' %}">
+        {% csrf_token %}
+        <div class="row m-3">
+            {{ form.title }}
+        </div>
+        <div class="row m-3">
+            {{ form.entry }}
+        </div>
+        <div class="col-lg p-5 text-end">
+        <button class="btn btn-primary" type="submit">ADD</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

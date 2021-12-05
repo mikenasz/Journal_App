@@ -1,0 +1,14 @@
+body{
+    background-color: #c5b6b6;
+}
+#header{
+    background-color: #20988a;
+}
+.journal-entry{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    border: #180206 solid 1px;
+    overflow-wrap: break-word;
+
+}

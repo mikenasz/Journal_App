@@ -5,5 +5,28 @@
 {% endblock %}
 
 {% block body %}
-    <h1>Journal</h1>
+<div class="container">
+    <div class="col-lg m-2 text-center">
+    <a href="{% url 'add' %}" class="btn btn-primary btn-md" > Add an entry</a>
+    </div>
+{% for entries in entries %}
+    <div class="journal-entry">
+    <div class="row">
+        <div class="col-6">
+
+            <h4 class="text-success"> {{ entries.title }}</h4>
+            <strong> {{ entries.created }}</strong>
+        </div>
+        <div class="col-6 text-end">
+
+            <a href="{% url 'delete' entries.id %}" class="btn btn-danger btn-sm">Delete</a>
+        </div>
+
+        <div class="col-md-12">
+           <p class="lead"> {{ entries.entry }} </p>
+        </div>
+    </div>
+    </div>
+{% endfor %}
+</div>
 {% endblock %}

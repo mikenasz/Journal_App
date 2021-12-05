@@ -1,0 +1,59 @@
+{% extends 'entry/base.html' %}
+
+{% block title %}
+    <title>What have you been up to?</title>
+{% endblock %}
+
+{% block body %}
+    <h1 class="display-4 text-center">What have you been up to?</h1>
+
+    <div class="section">
+        <h5>Social</h5>
+        <div class="inside">
+            <p>family</p>
+            <p>friends</p>
+            <p>date</p>
+            <p>party</p>
+        </div>
+    </div>
+    <div class="section">
+        <h5>Hobbies</h5>
+        <div class="inside">
+            <p>reading</p>
+            <p>gaming</p>
+            <p>sport</p>
+            <p>practice</p>
+        </div>
+    </div>
+    <div class="section">
+        <h5>Food</h5>
+        <div class="inside">
+            <p>healthy</p>
+            <p>fast food</p>
+            <p>restaurant</p>
+            <p>sweets</p>
+        </div>
+    </div>
+    <div class="section">
+        <h5>Health</h5>
+        <div class="inside">
+            <p>exercise</p>
+            <p>drink water</p>
+            <p>walk</p>
+            <p>stretch</p>
+        </div>
+    </div>
+    <div class="section">
+        <h5>Chores</h5>
+        <div class="inside">
+            <p>shopping</p>
+            <p>cleaning</p>
+            <p>cooking</p>
+            <p>laundry</p>
+        </div>
+    </div>
+    <form method="post" action="">
+        {% csrf_token %}
+        <button class="btn	btn-dark" type="submit">Continue</button>
+    </form>
+{% endblock %}

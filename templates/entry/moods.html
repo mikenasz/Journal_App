@@ -11,21 +11,26 @@
       </div>
       <div class="card-body">
         <h1 class="card-title">How Are You?</h1>
-          <p class="card-text">&#128467; <u>Today, {% now "N j, Y, P" %}</u></p>
-          <div id="emoji">
-              <div id="emoji1">
-                  <a style = "text-decoration: none" href="#"><span style='font-size:100px;'>&#128515;</span></a>
-                  <p>Amazing</p>
+          <form method="post" action="">
+              {% csrf_token %}
+              <p class="card-text">&#128467; <u>Today, {% now "N j, Y, P" %}</u></p>
+              <div id="emoji">
+                  <div id="emoji1">
+                      <a style = "text-decoration: none" href="#"><span style='font-size:100px;'>&#128515;</span></a>
+                      <p>Amazing</p>
+                  </div>
+                  <div id="emoji2">
+                      <a style = "text-decoration: none" href="#"><span style='font-size:100px;'>&#128528;</span></a>
+                      <p>Meh</p>
+                  </div>
+                  <div id="emoji3">
+                      <a style = "text-decoration: none" href="#"><span style='font-size:100px;'>&#128577;</span></a>
+                      <p>Terrible</p>
+                  </div>
               </div>
-              <div id="emoji2">
-                  <a style = "text-decoration: none" href="#"><span style='font-size:100px;'>&#128528;</span></a>
-                  <p>Meh</p>
-              </div>
-              <div id="emoji3">
-                  <a style = "text-decoration: none" href="#"><span style='font-size:100px;'>&#128577;</span></a>
-                  <p>Terrible</p>
-              </div>
-          </div>
+              <input class="btn btn-primary" type="submit" value="&#187;">
+              <p>Continue</p>
+          </form>
       </div>
       <div class="card-footer text-muted">
 

@@ -8,6 +8,10 @@
     padding-right: 50px;
 }
 
+#emoji1:target {
+    background: red;
+}
+
 .asteriskField {
     display: none;
 }
@@ -32,4 +36,18 @@ body{
     border: #180206 solid 1px;
     overflow-wrap: break-word;
 
+}
+
+.section {
+    margin: 25px;
+    border: 1px solid silver;
+    padding: 25px;
+}
+.inside {
+    display: flex;
+    justify-content: center;
+}
+.inside > p {
+    padding-left: 50px;
+    padding-right: 50px;
 }

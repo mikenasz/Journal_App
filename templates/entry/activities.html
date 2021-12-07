@@ -7,53 +7,54 @@
 {% block body %}
     <h1 class="display-4 text-center">What have you been up to?</h1>
 
-    <div class="section">
+    <div class="section shadow p-3 mb-3 bg-dark rounded">
         <h5>Social</h5>
         <div class="inside">
-            <p>family</p>
-            <p>friends</p>
-            <p>date</p>
-            <p>party</p>
+
+            <p><span id="activities">&#129730</span><br>family</p>
+            <p><span id="activities">&#128101</span><br>friends</p>
+            <p><span id="activities">&#9829</span><br>date</p>
+            <p><span id="activities">&#127881</span><br>party</p>
         </div>
     </div>
-    <div class="section">
+    <div class="section shadow p-3 mb-3 bg-dark rounded">
         <h5>Hobbies</h5>
         <div class="inside">
-            <p>reading</p>
-            <p>gaming</p>
-            <p>sport</p>
-            <p>practice</p>
+            <p><span id="activities">&#128214</span><br>reading</p>
+            <p><span id="activities">&#127918;</span><br>gaming</p>
+            <p><span id="activities">&#9917</span><br>sport</p>
+            <p><span id="activities">&#127928;</span><br>practice</p>
         </div>
     </div>
-    <div class="section">
+    <div class="section shadow p-3 mb-3 bg-dark rounded">
         <h5>Food</h5>
         <div class="inside">
-            <p>healthy</p>
-            <p>fast food</p>
-            <p>restaurant</p>
-            <p>sweets</p>
+            <p><span id="activities">&#129365</span><br>healthy</p>
+            <p><span id="activities">&#127839</span><br>fast food</p>
+            <p><span id="activities">&#127860</span><br>restaurant</p>
+            <p><span id="activities">&#129473</span><br>sweets</p>
         </div>
     </div>
-    <div class="section">
+    <div class="section shadow p-3 mb-3 bg-dark rounded">
         <h5>Health</h5>
         <div class="inside">
-            <p>exercise</p>
-            <p>drink water</p>
-            <p>walk</p>
-            <p>stretch</p>
+            <p><span id="activities">&#127939</span><br>exercise</p>
+            <p><span id="activities">&#128688</span><br>drink water</p>
+            <p><span id="activities">&#128694</span><br>walk</p>
+            <p><span id="activities">&#129496</span><br>yoga</p>
         </div>
     </div>
-    <div class="section">
+    <div class="section shadow p-3 mb-3 bg-dark rounded">
         <h5>Chores</h5>
         <div class="inside">
-            <p>shopping</p>
-            <p>cleaning</p>
-            <p>cooking</p>
-            <p>laundry</p>
+            <p><span id="activities">&#128717</span><br>shopping</p>
+            <p><span id="activities">&#129529</span><br>cleaning</p>
+            <p><span id="activities">&#127858</span><br>cooking</p>
+            <p><span id="activities">&#128090;</span><br>laundry</p>
         </div>
     </div>
     <form method="post" action="">
         {% csrf_token %}
-        <button class="btn	btn-dark" type="submit">Continue</button>
+        <button class="btn	btn-dark" type="submit" style="float: right ">Continue</button>
     </form>
 {% endblock %}

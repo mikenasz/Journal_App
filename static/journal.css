@@ -1,34 +1,28 @@
 #emoji {
     display: flex;
     justify-content: center;
+    color: white;
 }
-
 #emoji1, #emoji2, #emoji3 {
     padding-left: 50px;
     padding-right: 50px;
 }
-
 #emoji1:target {
     background: red;
 }
-
 .asteriskField {
     display: none;
 }
-
 form > .alert > ul > li {
     list-style: none;
 }
-
 body{
-    padding-top: 50px;
+    padding-top: 75px;
     background-color: #c5b6b6;
 }
-
 #header{
     background-color: #20988a;
 }
-
 .journal-entry{
     background-color: white;
     margin: 10px;
@@ -37,11 +31,11 @@ body{
     overflow-wrap: break-word;
 
 }
-
 .section {
     margin: 25px;
     border: 1px solid silver;
     padding: 25px;
+    color: white;
 }
 .inside {
     display: flex;
@@ -51,3 +45,18 @@ body{
     padding-left: 50px;
     padding-right: 50px;
 }
+.inside > h1 {
+  color: transparent;
+  text-shadow: 0 0 0 red;
+}
+#activities {
+    /*filter: contrast(0) sepia(1) saturate(100) brightness(.05) hue-rotate(180deg);*/
+    font-size: 50px;
+    width: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    text-align: center;
+    border: 2px solid #666;
+    text-shadow: 2px 2px 4px #000000;
+}
+

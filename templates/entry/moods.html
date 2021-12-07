@@ -1,7 +1,7 @@
 {% extends 'entry/base.html' %}
 
 {% block title %}
-    <title>How Are You?</title>
+    <title xmlns="http://www.w3.org/1999/html">How Are You?</title>
 {% endblock %}
 
 {% block body %}
@@ -11,21 +11,28 @@
       </div>
       <div class="card-body">
         <h1 class="card-title">How Are You?</h1>
-          <form method="post" action="">
+          <form method="post" action="{% url 'moods' %}">
               {% csrf_token %}
               <p class="card-text">&#128467; <u>Today, {% now "N j, Y, P" %}</u></p>
               <div id="emoji">
                   <div id="emoji1">
                       <a style = "text-decoration: none" href="#"><span style='font-size:100px;'>&#128515;</span></a>
                       <p>Amazing</p>
+
+                    <input type="radio" name="mood" value="Amazing" required id="id_mood_0">
+
+
+
                   </div>
                   <div id="emoji2">
                       <a style = "text-decoration: none" href="#"><span style='font-size:100px;'>&#128528;</span></a>
                       <p>Meh</p>
+                        <input type="radio" name="mood" value="Meh" required id="id_mood_1">
                   </div>
                   <div id="emoji3">
                       <a style = "text-decoration: none" href="#"><span style='font-size:100px;'>&#128577;</span></a>
                       <p>Terrible</p>
+                        <input type="radio" name="mood" value="Terrible" required id="id_mood_2">
                   </div>
               </div>
               <input class="btn btn-primary" type="submit" value="&#187;">

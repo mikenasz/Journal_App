@@ -3,8 +3,8 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth import login, logout
-from .forms import CreateUserForm, CreateEntryForm
-from .models import journal
+from .forms import CreateUserForm, CreateEntryForm,MoodForm
+from .models import journal, Mood
 
 
 @login_required(login_url='login')
@@ -60,7 +60,17 @@ def delete(request, id):
 
 
 def moodPage(request):
-    return render(request, 'entry/moods.html')
+    if request.method == 'POST':
+        form = MoodForm(request.POST)
+        if form.is_valid():
+            form.instance.user = request.user
+            form.save()
+            return redirect('index')
+    else:
+        form = MoodForm()
+    context = {'form': form}
+
+    return render(request, 'entry/moods.html',context)
 
 
 def activitiesPage(request):
@@ -70,3 +80,6 @@ def activitiesPage(request):
 def logout_view(request):
     logout(request)
     return redirect('index')
+def chart(request):
+
+    return render(request, 'entry/chart.html')

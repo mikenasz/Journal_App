@@ -32,24 +32,36 @@ class Mood(models.Model):
        # return 'Mood'.format(self.id)
 
 
-ACTIVITIES_CATEGORY = (
-    ('reading', 'reading'),
+Social= (
     ('family', 'family'),
     ('friends', 'friends'),
     ('date', 'date'),
     ('party', 'party'),
+
+)
+Hobbies=(
+    ('reading','reading'),
     ('gaming', 'gaming'),
     ('sport', 'sport'),
     ('practice', 'practice'),
-    ('healthy', 'healthy'),
+
+)
+Food=(
+('healthy', 'healthy'),
     ('fast food', 'fast food'),
     ('restaurant', 'restaurant'),
     ('sweets', 'sweets'),
-    ('exercise', 'exercise'),
+)
+
+Health=(
+('exercise', 'exercise'),
     ('drink water', 'drink water'),
     ('walk', 'walk'),
     ('yoga', 'yoga'),
-    ('shopping', 'shopping'),
+
+)
+Chores=(
+('shopping', 'shopping'),
     ('cooking', 'cooking'),
     ('cleaning', 'cleaning'),
     ('laundry', 'laundry')
@@ -57,9 +69,10 @@ ACTIVITIES_CATEGORY = (
 
 
 class Activities(models.Model):
-    social = models.CharField(max_length=20, blank=True, choices=ACTIVITIES_CATEGORY)
-    hobbies = models.CharField(max_length=20, blank=True, choices=ACTIVITIES_CATEGORY)
-    food = models.CharField(max_length=20, blank=True, choices=ACTIVITIES_CATEGORY)
-    health = models.CharField(max_length=20, blank=True, choices=ACTIVITIES_CATEGORY)
-    chores = models.CharField(max_length=20, blank=True, choices=ACTIVITIES_CATEGORY)
+    social = models.CharField(max_length=20, blank=True, choices=Social)
+    hobbies = models.CharField(max_length=20, blank=True, choices=Hobbies)
+    food = models.CharField(max_length=20, blank=True, choices=Food)
+    health = models.CharField(max_length=20, blank=True, choices=Health)
+    chores = models.CharField(max_length=20, blank=True, choices=Chores)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
 

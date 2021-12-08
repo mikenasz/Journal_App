@@ -44,36 +44,53 @@ class MoodForm(ModelForm):
         fields = ['mood']
 
 
-ACTIVITIES_CATEGORY = (
-    ('reading', 'reading'),
+Social= (
     ('family', 'family'),
     ('friends', 'friends'),
     ('date', 'date'),
     ('party', 'party'),
+
+)
+Hobbies=(
+    ('reading','reading'),
     ('gaming', 'gaming'),
     ('sport', 'sport'),
     ('practice', 'practice'),
-    ('healthy', 'healthy'),
+
+)
+Food=(
+('healthy', 'healthy'),
     ('fast food', 'fast food'),
     ('restaurant', 'restaurant'),
     ('sweets', 'sweets'),
-    ('exercise', 'exercise'),
+)
+
+Health=(
+('exercise', 'exercise'),
     ('drink water', 'drink water'),
     ('walk', 'walk'),
     ('yoga', 'yoga'),
-    ('shopping', 'shopping'),
+
+)
+Chores=(
+('shopping', 'shopping'),
     ('cooking', 'cooking'),
     ('cleaning', 'cleaning'),
     ('laundry', 'laundry')
 )
 
 
+
 class ActivitiesForm(ModelForm):
-    activities = forms.ChoiceField(choices=ACTIVITIES_CATEGORY, widget=forms.RadioSelect())
+    social = forms.ChoiceField(choices=Social, widget=forms.RadioSelect())
+    hobbies = forms.ChoiceField(choices=Hobbies, widget=forms.RadioSelect())
+    food = forms.ChoiceField(choices=Food, widget=forms.RadioSelect())
+    health = forms.ChoiceField(choices=Health, widget=forms.RadioSelect())
+    chores = forms.ChoiceField(choices=Chores, widget=forms.RadioSelect())
 
     class Meta:
         model = Activities
-        fields = ['activities']
+        fields = ['social', 'hobbies','food','health','chores']
 
     # def __init__(self,*args,**kwargs):
     #     super().__init__(*args,**kwargs)

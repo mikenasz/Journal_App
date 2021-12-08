@@ -58,7 +58,6 @@ def delete(request, id):
     entries.delete()
     return redirect('index')
 
-
 def moodPage(request):
     if request.method == 'POST':
         form = MoodForm(request.POST)
@@ -70,7 +69,8 @@ def moodPage(request):
         form = MoodForm()
     context = {'form': form}
 
-    return render(request, 'entry/moods.html', context)
+    return render(request, 'entry/moods.html',context)
+
 
 
 def activitiesPage(request):
@@ -94,5 +94,6 @@ def logout_view(request):
 
 def chart(request):
     moods=Mood.objects.all()
-    context={'moods':moods}
+    activities=Activities.objects.all()
+    context={'moods':moods, 'activites':activities}
     return render(request, 'entry/chart.html',context)

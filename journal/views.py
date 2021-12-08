@@ -34,7 +34,7 @@ def loginPage(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return redirect('index')
+            return redirect('moods')
     else:
         form = AuthenticationForm()
 
@@ -94,6 +94,10 @@ def logout_view(request):
 
 def chart(request):
     moods=Mood.objects.all()
-    activities=Activities.objects.all()
-    context={'moods':moods, 'activites':activities}
+
+    context={'moods':moods,}
     return render(request, 'entry/chart.html',context)
+def chart2(request):
+    activities = Activities.objects.all()
+    context = {'activities': activities}
+    return render(request, 'entry/chart2.html', context)

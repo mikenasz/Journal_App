@@ -75,4 +75,4 @@ class Activities(models.Model):
     health = models.CharField(max_length=20, blank=True, choices=Health)
     chores = models.CharField(max_length=20, blank=True, choices=Chores)
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
-
+    created_at = models.DateTimeField(auto_now_add=True, blank=True, null=True)

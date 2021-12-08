@@ -9,5 +9,7 @@ urlpatterns = [
     path('moods/', views.moodPage, name="moods"),
     path('activities/', views.activitiesPage, name="activities"),
     path('logout/', views.logout_view, name='logout'),
-    path('chart/', views.chart, name='chart')
+    path('chart/', views.chart, name='chart'),
+    path('chart2/', views.chart2, name='chart2'),
+
 ]

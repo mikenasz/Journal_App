@@ -2,17 +2,26 @@
 {% block body %}
 <div class="card m-5">
     <div class="card-header">
-        Moods History
+        <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Moods History</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'chart2' %}">Activities History</a>
+      </li>
+        </ul>
     </div>
     {% for moods in moods %}
             <div class="moods-block">
 
             <h5 class="font weight-bold"><span> On</span>   {{ moods.created_at }}</h5>
 
-            <p class="lead"><span> Your Moodd Was</span> {{ moods.mood }}</p>
+            <p class="lead"><span> Your Mood Was</span> {{ moods.mood }}</p>
 
 
         </div>
     {% endfor %}
+
  </div>
+
 {% endblock %}

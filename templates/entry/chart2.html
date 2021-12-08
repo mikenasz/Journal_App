@@ -1,0 +1,31 @@
+{% extends 'entry/base.html' %}
+{% block body %}
+    <div class="card m-5">
+    <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'chart' %}" >Moods History</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="#" >Activities History</a>
+      </li>
+        </ul>
+    </div>
+    {% for activities in activities %}
+        <div class="act-block">
+
+            <h5 class="font weight-bold"><span> On</span>   {{ activities.created_at }}</h5>
+
+                <p class="lead"> Social: <span id="text-act">{{ activities.social }}</span></p>
+                <p class="lead"> Hobbies: <span id="text-act">{{ activities.hobbies }}</span></p>
+                <p class="lead"> Food: <span id="text-act">{{ activities.food }}</span></p>
+                <p class="lead"> Health: <span id="text-act">{{ activities.health }}</span></p>
+                <p class="lead"> Chores: <span id="text-act">{{ activities.chores }}</span></p>
+
+        </div>
+    {% endfor %}
+
+
+ </div>
+
+{% endblock %}

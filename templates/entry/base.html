@@ -30,7 +30,7 @@
 
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{%  url 'moods' %}">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{%  url 'index' %}">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'activities' %}">Activities</a>
@@ -38,6 +38,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'add' %}">Journal</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'chart' %}">History</a>
+                </li>
+
 
                     <li class="dropdown">
                         <a class="nav-link dropbtn" data-bs-toggle="dropdown" role="button" style="color: white">{{user.username}}</a>

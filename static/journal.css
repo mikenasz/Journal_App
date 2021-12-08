@@ -59,3 +59,16 @@ body{
     border: 1px solid #595454;
     padding: 10px;
 }
+.act-block{
+    border: 1px solid #595454;
+    padding: 10px;
+
+}
+.act-block > p{
+    display: inline;
+    margin: 5px;
+}
+#text-act{
+    font-weight: bold;
+    text-transform: capitalize;
+}

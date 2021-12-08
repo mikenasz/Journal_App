@@ -20,82 +20,77 @@
     <div class="section shadow p-3 mb-3 bg-dark rounded">
         <h5>Social</h5>
         <div class="inside">
-
             <p onmouseover="changeColor(this)" onmouseout="changeColor(this)"><span id="activities">&#129730</span>
-                <br>family<br><input type="radio" name="activities" value="family" style="margin-left: 25px"></p>
+                <br>family<br></p>
             <p onmouseover="changeColor(this)" onmouseout="changeColor(this)"><span id="activities">&#128101</span>
-                <br>friends<br><input type="radio" name="activities" value="friends" style="margin-left: 25px"></p>
+                <br>friends<br></p>
             <p onmouseover="changeColor(this)" onmouseout="changeColor(this)"><span id="activities">&#9829</span>
-                <br>date<br><input type="radio" name="activities" value="date" style="margin-left: 25px"></p>
+                <br>date<br></p>
             <p onmouseover="changeColor(this)" onmouseout="changeColor(this)"><span id="activities">&#127881</span>
-                <br>party<br><input type="radio" name="activities" value="party" style="margin-left: 25px"></p>
+                <br>party<br></p>
+            {{ form.social }}
         </div>
     </div>
-        </form>
-    <form method="post" action="{% url 'activities' %}">
-    {% csrf_token %}
+
     <div class="section shadow p-3 mb-3 bg-dark rounded">
         <h5>Hobbies</h5>
         <div class="inside">
             <p onmouseover="changeColor(this)" onmouseout="changeColor(this)"><span id="activities">&#128214</span>
-                <br>reading<br><input type="radio" name="activities" value="reading" style="margin-left: 25px"></p>
+                <br>reading<br></p>
             <p onmouseover="changeColor(this)" onmouseout="changeColor(this)"><span id="activities">&#127918;</span>
-                <br>gaming<br><input type="radio" name="activities" value="gaming" style="margin-left: 25px"></p>
+                <br>gaming<br></p>
             <p onmouseover="changeColor(this)" onmouseout="changeColor(this)"><span id="activities">&#9917</span>
-                <br>sport<br><input type="radio" name="activities" value="sport" style="margin-left: 25px"></p>
+                <br>sport<br></p>
             <p onmouseover="changeColor(this)" onmouseout="changeColor(this)"><span id="activities">&#127928;</span>
-                <br>practice<br><input type="radio" name="activities" value="practice" style="margin-left: 25px"></p>
+                <br>practice<br></p>
+            {{ form.hobbies }}
         </div>
     </div>
-        </form>
-    <form method="post" action="{% url 'activities' %}">
-    {% csrf_token %}
+
     <div class="section shadow p-3 mb-3 bg-dark rounded">
         <h5>Food</h5>
         <div class="inside">
             <p onmouseover="changeColor(this)" onmouseout="changeColor(this)"><span id="activities">&#129365</span>
-                <br>healthy<br><input type="radio" name="activities" value="healthy" style="margin-left: 25px"></p>
+                <br>healthy<br></p>
             <p onmouseover="changeColor(this)" onmouseout="changeColor(this)"><span id="activities">&#127839</span>
-                <br>fast food<br><input type="radio" name="activities" value="fast food" style="margin-left: 25px"></p>
+                <br>fast food<br></p>
             <p onmouseover="changeColor(this)" onmouseout="changeColor(this)"><span id="activities">&#127860</span>
-                <br>restaurant<br><input type="radio" name="activities" value="restaurant" style="margin-left: 25px"></p>
+                <br>restaurant<br></p>
             <p onmouseover="changeColor(this)" onmouseout="changeColor(this)"><span id="activities">&#129473</span>
-                <br>sweets<br><input type="radio" name="activities" value="sweets" style="margin-left: 25px"></p>
+                <br>sweets<br></p>
+            {{ form.food }}
         </div>
     </div>
-        </form>
-    <form method="post" action="{% url 'activities' %}">
-    {% csrf_token %}
+
     <div class="section shadow p-3 mb-3 bg-dark rounded">
         <h5>Health</h5>
         <div class="inside">
             <p onmouseover="changeColor(this)" onmouseout="changeColor(this)"><span id="activities">&#127939</span>
-                <br>exercise<br><input type="radio" name="activities" value="exercise" style="margin-left: 25px"></p>
+                <br>exercise<br></p>
             <p onmouseover="changeColor(this)" onmouseout="changeColor(this)"><span id="activities">&#128688</span>
-                <br>drink water<br><input type="radio" name="activities" value="drink water" style="margin-left: 25px"></p>
+                <br>drink water<br></p>
             <p onmouseover="changeColor(this)" onmouseout="changeColor(this)"><span id="activities">&#128694</span>
-                <br>walk<br><input type="radio" name="activities" value="walk" style="margin-left: 25px"></p>
+                <br>walk<br></p>
             <p onmouseover="changeColor(this)" onmouseout="changeColor(this)"><span id="activities">&#129496</span>
-                <br>yoga<br><input type="radio" name="activities" value="yoga" style="margin-left: 25px"></p>
+                <br>yoga<br></p>
+            {{ form.health }}
         </div>
     </div>
-        </form>
-    <form method="post" action="{% url 'activities' %}">
-    {% csrf_token %}
+
     <div class="section shadow p-3 mb-3 bg-dark rounded">
         <h5>Chores</h5>
         <div class="inside">
             <p onmouseover="changeColor(this)" onmouseout="changeColor(this)"><span id="activities">&#128717</span>
-                <br>shopping<br><input type="radio" name="activities" value="shopping" style="margin-left: 25px"></p>
+                <br>shopping<br></p>
             <p onmouseover="changeColor(this)" onmouseout="changeColor(this)"><span id="activities">&#129529</span>
-                <br>cleaning<br><input type="radio" name="activities" value="cleaning" style="margin-left: 25px"></p>
+                <br>cleaning<br></p>
             <p onmouseover="changeColor(this)" onmouseout="changeColor(this)"><span id="activities">&#127858</span>
-                <br>cooking<br><input type="radio" name="activities" value="cooking" style="margin-left: 25px"></p>
+                <br>cooking<br></p>
             <p onmouseover="changeColor(this)" onmouseout="changeColor(this)"><span id="activities">&#128090;</span>
-                <br>laundry<br><input type="radio" name="activities" value="laundry" style="margin-left: 25px"></p>
+                <br>laundry<br></p>
+            {{ form.chores }}
         </div>
     </div>
-
 
         <button class="btn btn-dark" type="submit" style="float: right ">Continue</button>
     </form>

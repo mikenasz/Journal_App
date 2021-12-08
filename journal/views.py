@@ -81,5 +81,6 @@ def logout_view(request):
     logout(request)
     return redirect('index')
 def chart(request):
-
-    return render(request, 'entry/chart.html')
+    moods=Mood.objects.all()
+    context={'moods':moods}
+    return render(request, 'entry/chart.html',context)

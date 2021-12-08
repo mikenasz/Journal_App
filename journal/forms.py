@@ -3,7 +3,8 @@ from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
-from .models import journal, Mood
+from .models import journal, Mood, Activities
+
 
 class CreateUserForm(UserCreationForm):
     class Meta:
@@ -17,14 +18,16 @@ class CreateUserForm(UserCreationForm):
             })
         }
 
+
 class CreateEntryForm(ModelForm):
     class Meta:
         model = journal
-        fields = ('title','entry')
+        fields = ('title', 'entry')
     def __init__(self,*args,**kwargs):
         super().__init__(*args,**kwargs)
         self.fields['title'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Title'})
         self.fields['entry'].widget.attrs.update({'class':'textarea','placeholder':'Enter a journal entry'})
+
 
 MOOD_CATEGORY = (
     ('Amazing', 'Amazing'),
@@ -32,12 +35,45 @@ MOOD_CATEGORY = (
     ('Terrible', 'Terrible'),
 
 )
+
+
 class MoodForm(ModelForm):
     mood = forms.ChoiceField(choices=MOOD_CATEGORY, widget=forms.RadioSelect())
     class Meta:
         model = Mood
-        fields= ['mood']
+        fields = ['mood']
 
+
+ACTIVITIES_CATEGORY = (
+    ('reading', 'reading'),
+    ('family', 'family'),
+    ('friends', 'friends'),
+    ('date', 'date'),
+    ('party', 'party'),
+    ('gaming', 'gaming'),
+    ('sport', 'sport'),
+    ('practice', 'practice'),
+    ('healthy', 'healthy'),
+    ('fast food', 'fast food'),
+    ('restaurant', 'restaurant'),
+    ('sweets', 'sweets'),
+    ('exercise', 'exercise'),
+    ('drink water', 'drink water'),
+    ('walk', 'walk'),
+    ('yoga', 'yoga'),
+    ('shopping', 'shopping'),
+    ('cooking', 'cooking'),
+    ('cleaning', 'cleaning'),
+    ('laundry', 'laundry')
+)
+
+
+class ActivitiesForm(ModelForm):
+    activities = forms.ChoiceField(choices=ACTIVITIES_CATEGORY, widget=forms.RadioSelect())
+
+    class Meta:
+        model = Activities
+        fields = ['activities']
 
     # def __init__(self,*args,**kwargs):
     #     super().__init__(*args,**kwargs)

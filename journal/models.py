@@ -32,3 +32,34 @@ class Mood(models.Model):
        # return 'Mood'.format(self.id)
 
 
+ACTIVITIES_CATEGORY = (
+    ('reading', 'reading'),
+    ('family', 'family'),
+    ('friends', 'friends'),
+    ('date', 'date'),
+    ('party', 'party'),
+    ('gaming', 'gaming'),
+    ('sport', 'sport'),
+    ('practice', 'practice'),
+    ('healthy', 'healthy'),
+    ('fast food', 'fast food'),
+    ('restaurant', 'restaurant'),
+    ('sweets', 'sweets'),
+    ('exercise', 'exercise'),
+    ('drink water', 'drink water'),
+    ('walk', 'walk'),
+    ('yoga', 'yoga'),
+    ('shopping', 'shopping'),
+    ('cooking', 'cooking'),
+    ('cleaning', 'cleaning'),
+    ('laundry', 'laundry')
+)
+
+
+class Activities(models.Model):
+    social = models.CharField(max_length=20, blank=True, choices=ACTIVITIES_CATEGORY)
+    hobbies = models.CharField(max_length=20, blank=True, choices=ACTIVITIES_CATEGORY)
+    food = models.CharField(max_length=20, blank=True, choices=ACTIVITIES_CATEGORY)
+    health = models.CharField(max_length=20, blank=True, choices=ACTIVITIES_CATEGORY)
+    chores = models.CharField(max_length=20, blank=True, choices=ACTIVITIES_CATEGORY)
+

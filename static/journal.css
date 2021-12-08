@@ -45,12 +45,7 @@ body{
     padding-left: 50px;
     padding-right: 50px;
 }
-.inside > h1 {
-  color: transparent;
-  text-shadow: 0 0 0 red;
-}
 #activities {
-    /*filter: contrast(0) sepia(1) saturate(100) brightness(.05) hue-rotate(180deg);*/
     font-size: 50px;
     width: 80px;
     line-height: 80px;
